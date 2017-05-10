@@ -1,0 +1,4 @@
+---
+- name: Install epel-release
+  yum: name=epel-release state=latest
+  become: yes

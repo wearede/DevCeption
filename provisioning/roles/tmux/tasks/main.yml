@@ -1,0 +1,35 @@
+---
+- name: Install libraries needed to make tmux
+  yum: name={{ item }} state=latest
+  with_items:
+    - gcc
+    - ncurses-devel
+    - libevent-devel
+    - automake
+  become: yes
+
+- name: Clone tmux
+  git: repo=git://github.com/tmux/tmux.git
+       dest=/tmp/tmux
+       version=2.4
+  register: tmux
+
+- name: Make tmux
+  shell: "{{ item }}"
+  args:
+    chdir: /tmp/tmux
+  with_items:
+    - sh autogen.sh
+    - ./configure && make
+    - make install
+  become: yes
+  when: tmux.changed
+
+- name: Clone .tmux.conf
+  git: repo=git://gist.github.com/2f430907066d40f979465162b71423b8.git
+       dest=~/.configs/tmuxconf
+  register: tmuxconf
+
+- name: Copy .tmux.conf
+  command: cp ~/.configs/tmuxconf/.tmux.conf ~/.tmux.conf
+  when: tmuxconf.changed

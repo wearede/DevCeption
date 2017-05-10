@@ -1,0 +1,45 @@
+---
+- name: Install libraries needed to make vim
+  yum: name={{ item }} state=latest
+  with_items:
+    - gcc
+    - ncurses-devel
+    - python-devel
+  become: yes
+
+- name: Clone vim
+  git: repo=git://github.com/vim/vim.git
+       dest=/tmp/vim
+       version=v8.0.0586
+  register: vim
+
+- name: Make vim
+  shell: "{{ item }}"
+  args:
+    chdir: /tmp/vim/src
+  with_items:
+    - ./configure --enable-pythoninterp
+    - make
+    - make install
+  become: yes
+  when: vim.changed
+
+- name: Clone .vimrc
+  git: repo=git://gist.github.com/dcbeb61ce0bc1f1ed5387f25691d88d3.git
+       dest=~/.configs/vimrc
+  register: vimrc
+
+- name: Copy .vimrc
+  command: cp ~/.configs/vimrc/.vimrc ~/.vimrc
+  when: vimrc.changed
+
+- name: Install vim plugins
+  shell: vim -c ":PlugInstall" -c q -c q -c q
+  when: vimrc.changed
+
+- name: alias vi to vim
+  alternatives:
+    name: vi
+    link: /usr/local/bin/vi
+    path: /usr/local/bin/vim
+  become: yes

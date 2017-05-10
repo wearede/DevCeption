@@ -1,0 +1,24 @@
+---
+- name: Install zsh
+  yum: name=zsh state=latest
+  become: yes
+
+- name: Clone oh-my-zsh repo
+  git: repo=git://github.com/robbyrussell/oh-my-zsh.git
+       dest=~/.oh-my-zsh
+  register: ohmyzsh
+
+- name: Create a new zsh config from the template in the repo
+  command: cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  when: ohmyzsh.changed
+
+- name: Enable plugins in zshrc
+  replace:
+    path: ~/.zshrc
+    regexp: 'plugins=\(git\)'
+    replace: 'plugins=(git history-substring-search tmux)'
+  when: ohmyzsh.changed
+
+- name: Set zsh as default shell
+  user: name=vagrant shell=/usr/bin/zsh
+  become: yes

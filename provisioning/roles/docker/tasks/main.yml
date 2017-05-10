@@ -1,0 +1,36 @@
+---
+- name: Add docker-ce stable repository
+  yum_repository:
+    name: Docker-CE-Stable
+    description: Docker CE Stable YUM repo
+    baseurl: https://download.docker.com/linux/centos/$releasever/$basearch/stable
+    gpgkey: https://download.docker.com/linux/centos/gpg
+    gpgcheck: yes
+  become: yes
+
+- name: Install docker-ce stable
+  yum: name=docker-ce state=latest
+  become: yes
+
+- name: Enable service docker
+  systemd:
+    name: docker
+    enabled: yes
+    state: started
+  become: yes
+
+- name: Install docker-compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/1.11.2/docker-compose-Linux-x86_64
+    dest: /usr/bin/docker-compose
+    mode: a+x
+  become: yes
+
+- name: Set ipv4 forwarding on
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: 1
+    sysctl_set: yes
+    state: present
+    reload: yes
+  become: yes

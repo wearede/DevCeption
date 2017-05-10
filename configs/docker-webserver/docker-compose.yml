@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    ports:
+      - "127.0.0.1:3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: JSf3z1rXsw30gQ==
+    volumes:
+      - ./persist/mysql:/var/lib/mysql
+  php5-fpm:
+    build: ./php/php5-fpm
+    restart: always
+    volumes:
+      - /srv/www:/www
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+  php7-fpm:
+    build: ./php/php7-fpm
+    restart: always
+    volumes:
+      - /srv/www:/www
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+  nginx:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    restart: always
+    volumes:
+      - ./nginx/sites:/etc/nginx/sites
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx-wp-common.conf:/etc/nginx/nginx-wp-common.conf
+      - ./nginx/nginx-php-common.conf:/etc/nginx/nginx-php-common.conf
+      - /srv/www:/www

@@ -1,0 +1,11 @@
+---
+- name: Setup DevBox
+  hosts: DevBox
+
+  roles:
+    # - epel
+    - tools
+    - oh-my-zsh
+    - vim
+    - tmux
+    - docker
