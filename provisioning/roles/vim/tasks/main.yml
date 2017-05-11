@@ -24,14 +24,11 @@
   become: yes
   when: vim.changed
 
-- name: Clone .vimrc
-  git: repo=git://gist.github.com/dcbeb61ce0bc1f1ed5387f25691d88d3.git
-       dest=~/.configs/vimrc
-  register: vimrc
-
 - name: Copy .vimrc
-  command: cp ~/.configs/vimrc/.vimrc ~/.vimrc
-  when: vimrc.changed
+  copy:
+    src: .vimrc
+    dest: ~/.vimrc
+  register: vimrc
 
 - name: Install vim plugins
   shell: vim -c ":PlugInstall" -c q -c q -c q
