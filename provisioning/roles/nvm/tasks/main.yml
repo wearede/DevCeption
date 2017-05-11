@@ -1,0 +1,10 @@
+---
+- name: Clone nvm
+  git: repo=git://github.com/creationix/nvm.git
+       dest=~/.nvm
+       version=v0.33.2
+
+- name: Source nvm in ~/.zshrc
+  lineinfile:
+    path: ~/.zshrc
+    line: "source ~/.nvm/nvm.sh"
