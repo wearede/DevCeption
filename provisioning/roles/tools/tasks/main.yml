@@ -2,3 +2,14 @@
 - name: Install git
   yum: name=git state=latest
   become: yes
+
+- name: Copy .gitconfig
+  copy:
+    src: .gitconfig
+    dest: ~/.gitconfig
+
+- name: Copy .git-commit-template.txt
+  copy:
+    src: .git-commit-template.txt
+    dest: ~/.git-commit-template.txt
+
