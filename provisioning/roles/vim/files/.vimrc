@@ -27,7 +27,9 @@ Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'valloric/matchtagalways' " doesn't work properly in neovim, cursor jumps about
 Plug 'ap/vim-buftabline'
-Plug 'ConradIrwin/vim-bracketed-paste'
+" Plug 'ConradIrwin/vim-bracketed-paste' doesn't work in new tmux
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
 
 " Initialize plugin system
 call plug#end()
