@@ -5,8 +5,8 @@
   roles:
     # - epel
     - tools
-    - nvm
     - oh-my-zsh
+    - nvm
     - vim
     - tmux
     - docker
