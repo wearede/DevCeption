@@ -10,7 +10,7 @@
 - name: Clone vim
   git: repo=git://github.com/vim/vim.git
        dest=/tmp/vim
-       version=v8.0.0586
+       version=v8.0.0642
   register: vim
 
 - name: Make vim
