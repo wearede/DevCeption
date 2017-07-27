@@ -1,0 +1,5 @@
+---
+- name: set timezone to Asia/Tbilisi
+  timezone:
+    name: Asia/Tbilisi
+  become: yes

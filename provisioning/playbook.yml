@@ -3,6 +3,7 @@
   hosts: DevBox
 
   roles:
+    - timezone
     # - epel
     - tools
     - oh-my-zsh
