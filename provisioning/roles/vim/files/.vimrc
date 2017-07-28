@@ -31,6 +31,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
 
 " Initialize plugin system
 call plug#end()
