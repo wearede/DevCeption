@@ -8,6 +8,7 @@
     - tools
     - oh-my-zsh
     - nvm
+    - npm
     - vim
     - tmux
     - docker

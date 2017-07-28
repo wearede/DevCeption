@@ -8,3 +8,7 @@
   lineinfile:
     path: ~/.zshrc
     line: "source ~/.nvm/nvm.sh"
+
+- name: install node lts
+  shell: >
+    /bin/bash -c "source ~/.nvm/nvm.sh && nvm install --lts && nvm use --lts"
