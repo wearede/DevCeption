@@ -21,7 +21,7 @@
 
 - name: Install docker-compose
   get_url:
-    url: https://github.com/docker/compose/releases/download/1.11.2/docker-compose-Linux-x86_64
+    url: https://github.com/docker/compose/releases/download/1.16.1/docker-compose-Linux-x86_64
     dest: /usr/bin/docker-compose
     mode: a+x
   become: yes
