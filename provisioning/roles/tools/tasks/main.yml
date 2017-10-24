@@ -18,3 +18,8 @@
     src: .git-commit-template.txt
     dest: ~/.git-commit-template.txt
 
+- name: Install misc
+  yum: name={{item}} state=latest
+  with_items:
+    - unzip
+  become: yes
