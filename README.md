@@ -2,6 +2,15 @@
 
 ### Goodies
 
+- docker
+- - services
+- - - webserver
+- - - - nginx
+- - - - php5, php7
+- - - - mariadb
+- - - phpcs
+- docker-compose
+
 ### Host Requirements
 
 - virtualbox
