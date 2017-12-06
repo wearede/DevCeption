@@ -1,5 +1,10 @@
 # DevCeption
 
+## Why?
+We (Devs) use too many tools for our everyday tasks, from editor to webservers to terminals. This makes switching machines painful.
+
+This box aims to get you up and running on a brand new machine in no time!
+
 ### Goodies
 
 - docker
