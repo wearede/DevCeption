@@ -1,6 +1,6 @@
 # DevCeption
 
-![1 ynkbekygpvlwnlih_xzdba](https://user-images.githubusercontent.com/8479569/33684572-23cad2ce-dae8-11e7-83e8-33f6bb0dd0ab.jpeg)
+![DevCeption](https://user-images.githubusercontent.com/8479569/33684572-23cad2ce-dae8-11e7-83e8-33f6bb0dd0ab.jpeg)
 
 This is an inception style (**Docker** inside **Vagrant** inside **Host**) development environment built around **tmux/vim** workflow.
 
@@ -121,6 +121,21 @@ obviously replacing `IdentityFile` path `~/Code/Vagrant/DevCeption` with the loc
 `:wq`
 
 and now you can simply `ssh DevCeption` from your host machine terminal.
+
+### Step 3
+
+We need to build docker webserver containers inside a DevCeption box - While we are at it, we can take tmux out for a spin.
+
+`ssh DevCeption` and once you are in type `ts webserver`
+
+new tmux session will start, type `cd /srv/docker/services` lets divide window in two panels, type `alt+\` to navigate panels use `alt+h` or `alt+l` in one panel navigate `phpcs` directory on the other `webserver`
+
+In webserver directory run `sudo docker-compose up`
+and inside phpcs dir run `sudo docker build -t phphcs .`
+
+![tmux](https://user-images.githubusercontent.com/8479569/33686579-caa3639e-daee-11e7-897e-7547d61c07b3.png)
+
+Cool thing is that you can quite iterm2 but tmux session will continue to run inside DevCeption box, you can always go back to it by typing `ta webserver`
 
 ## Back Up Your Work
 
