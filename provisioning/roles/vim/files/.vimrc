@@ -21,17 +21,19 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
-" Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
-Plug 'valloric/matchtagalways' " doesn't work properly in neovim, cursor jumps about
+Plug 'valloric/matchtagalways'
 Plug 'ap/vim-buftabline'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
@@ -70,9 +72,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" let g:syntastic_php_checkers = ['php', 'phpcs']
-" let g:syntastic_php_phpcs_exec = '/usr/local/bin/phpcs'
-" let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_phpcs_exec = '/usr/local/bin/phpcs'
+let g:syntastic_php_phpcs_args = '--standard=WordPress -n'
 " let g:syntastic_debug = 3
 
 " when opening files with :Ex or :Sex nertw uses full path
@@ -85,9 +87,6 @@ set browsedir=current
 "*****************************************************************************
 "" yank and cut to osx clipboard
 "*****************************************************************************
-
-noremap YY "+y<CR>
-noremap XX "+x<CR>
 
 "*****************************************************************************
 "" indent
@@ -170,3 +169,11 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+
+"*****************************************************************************
+"" UltiSnips
+"*****************************************************************************
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+
