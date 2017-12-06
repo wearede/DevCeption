@@ -78,8 +78,8 @@ p.s. Also because docker on mac really sucks!
 In the root DevCeption directory
 
 ```
-rsync -vriht DevBox:/srv/docker/ ./configs/docker/ --delete
-rsync -vriht DevBox:/srv/www/ ./www --delete
+rsync -vriht DevCeption:/srv/docker/ ./configs/docker/ --delete
+rsync -vriht DevCeption:/srv/www/ ./www --delete
 ```
 
 ## Common Issues
