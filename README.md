@@ -9,7 +9,7 @@ p.s. Also because docker on mac really sucks!
 
 ### Goodies
 
-docker
+**docker**
 - services
 - - webserver
 - - - nginx
@@ -20,12 +20,18 @@ docker
 - - phpcs, wpcs
 - docker-compose
 
-oh-my-zsh
+---
+
+**oh-my-zsh**
 - plugins: git, history-substring-search, tmux
 
-tmux
+---
 
-vim
+**tmux**
+
+---
+
+**vim**
 - vim-quantum
 - ctrlp
 - vim-vinegar
@@ -47,10 +53,14 @@ vim
 - ultisnips
 - vim-snippets
 
-nvm
+---
+
+**nvm**
 - node lts, gulp
 
-git
+---
+
+**git**
 - git-commit-template
 - diff-so-fancy
 
