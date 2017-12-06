@@ -15,7 +15,7 @@
 - name: Enable plugins in zshrc
   replace:
     path: ~/.zshrc
-    regexp: 'plugins=\(git\)'
+    regexp: 'plugins=\(\n.*git\n\)'
     replace: 'plugins=(git history-substring-search tmux)'
   when: ohmyzsh.changed
 
