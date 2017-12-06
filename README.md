@@ -100,7 +100,6 @@ Lets configure ssh on host machine for painless ssh-eing, on macOS you would do
 
 ```
 vi ~/.ssh/config
-
 ```
 and paste
 ```
