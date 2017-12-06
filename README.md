@@ -135,7 +135,7 @@ and inside phpcs dir run `sudo docker build -t phphcs .`
 
 ![tmux](https://user-images.githubusercontent.com/8479569/33686579-caa3639e-daee-11e7-897e-7547d61c07b3.png)
 
-Cool thing is that you can quite iterm2 but tmux session will continue to run inside DevCeption box, you can always go back to it by typing `ta webserver`
+You can now quit iterm2 but tmux session will continue to run inside DevCeption box, you can always go back to it by typing `ta webserver` to see other sessions type `tl`
 
 ## Back Up Your Work
 
