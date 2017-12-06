@@ -9,7 +9,7 @@
 - - - - php5, php7
 - - - - mariadb
 - - - phpcs
-- docker-compose
+- - docker-compose
 
 ### Host Requirements
 
