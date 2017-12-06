@@ -2,7 +2,7 @@
 
 ![1 ynkbekygpvlwnlih_xzdba](https://user-images.githubusercontent.com/8479569/33684572-23cad2ce-dae8-11e7-83e8-33f6bb0dd0ab.jpeg)
 
-This is a developer environment with Docker inside Vagrant inside Host centered around tmux/vim.
+This is an inception style (**Docker** inside **Vagrant** inside **Host**) development environment built around **tmux/vim** workflow.
 
 ## Why?
 We (Devs) use too many tools for our everyday tasks, from editors to webservers to terminals. This makes switching machines painful. In case of theft, data damage, or simply format-reinstall OS, you need to go through the pain of reinstall reconfigure everytime... Solution to this problem is to have all your dev tools inside a container that can be **created**, **destroyed**, **reproduced** on any machine without a hit to productivity.
