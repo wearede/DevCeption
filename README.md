@@ -1,10 +1,10 @@
 # DevCeption
 
-# Getting Started
+### Getting Started
 
-# Back Up Your Work
+### Back Up Your Work
 
-# Common Issues
+### Common Issues
 
 - vim plugin install hangs:
   - Iterm2 disable profile -> terminal -> environment -> set locale variable automatically
