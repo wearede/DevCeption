@@ -74,7 +74,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_php_phpcs_exec = '/usr/local/bin/phpcs'
-let g:syntastic_php_phpcs_args = '--standard=WordPress -n'
+let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
 " let g:syntastic_debug = 3
 
 " when opening files with :Ex or :Sex nertw uses full path
