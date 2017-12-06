@@ -1,5 +1,5 @@
-.vagrant
-www/*
-!www/.gitkeep
-configs/docker/apps/*
-!configs/docker/apps/.gitkeep
+/.vagrant
+/www/*
+!/www/.gitkeep
+/configs/docker/apps/*
+!/configs/docker/apps/.gitkeep

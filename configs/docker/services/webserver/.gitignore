@@ -1,4 +1,4 @@
-persist/*
-!persist/.gitkeep
-sites/*
-!sites/.gitkeep
+/persist/*
+!/persist/.gitkeep
+/nginx/sites/*
+!/nginx/sites/.gitkeep
