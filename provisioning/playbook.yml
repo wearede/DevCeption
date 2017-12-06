@@ -10,5 +10,6 @@
     - nvm
     - npm
     - vim
+    # - phpcs
     - tmux
     - docker
