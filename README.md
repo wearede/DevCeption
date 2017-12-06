@@ -103,7 +103,6 @@ vi ~/.ssh/config
 
 ```
 and paste
-
 ```
 #
 Host DevCeption
@@ -120,7 +119,9 @@ LogLevel FATAL
 
 obviously replacing `IdentityFile` path `~/Code/Vagrant/DevCeption` with the location of your *DevCeption* directory.
 
-Now you can simply `ssh DevCeption` from your host machine terminal.
+`:wq`
+
+and now you can simply `ssh DevCeption` from your host machine terminal.
 
 ## Back Up Your Work
 
