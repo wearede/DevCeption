@@ -75,7 +75,7 @@ p.s. Also because docker on mac really sucks!
 
 ## Back Up Your Work
 
-**Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
+It is important to understand that project files will live inside DevCeption box and will not be synced back to host machine automatically. You have to do this manually.
 
 Run these commands on your host:
 
@@ -83,6 +83,7 @@ Run these commands on your host:
 rsync -vriht DevCeption:/srv/docker/ ./configs/docker/ --delete
 rsync -vriht DevCeption:/srv/www/ ./www --delete
 ```
+**Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
 
 ## Common Issues
 
