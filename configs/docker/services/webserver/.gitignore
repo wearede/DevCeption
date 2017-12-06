@@ -1,2 +1,4 @@
-persist
-sites
+persist/*
+!persist/.gitkeep
+sites/*
+!sites/.gitkeep
