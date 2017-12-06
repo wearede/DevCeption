@@ -7,7 +7,7 @@ With **DevCeption**, you can go from mac to linux to windows and always find you
 
 p.s. Also because docker on mac really sucks!
 
-### Goodies
+## Goodies
 
 **docker**
 - services
@@ -64,18 +64,18 @@ p.s. Also because docker on mac really sucks!
 - git-commit-template
 - diff-so-fancy
 
-### Host Requirements
+## Host Requirements
 
 - virtualbox
 - vagrant
 - ansible
 - rsync
 
-### Getting Started
+## Getting Started
 
-### Back Up Your Work
+## Back Up Your Work
 
-### Common Issues
+## Common Issues
 
 - ansible task **Install vim plugins** hangs:
   - *Iterm2* disable `profile -> terminal -> environment -> set locale variable automatically`
