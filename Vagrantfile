@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   # https://docs.vagrantup.com.
 
   config.vm.box = "bento/centos-7.4"
-  config.vm.define "DevBox"
+  config.vm.define "DevCeption"
   config.vm.network "private_network", ip: "192.168.33.33"
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "./www", "/srv/www", type: "rsync"
