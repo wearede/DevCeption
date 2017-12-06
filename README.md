@@ -132,7 +132,7 @@ We need to build docker webserver containers inside a DevCeption box - and while
 - lets divide window in two panels type b. `alt+\`,
 - to navigate panels use `alt+h` or `alt+l`.
 
-In the left panel navigate `cd webserver` directory on the right one `cd phpcs`
+In the left panel `cd webserver` directory on the right one `cd phpcs`
 
 - in the webserver directory run `sudo docker-compose up`
 - and inside phpcs dir run `sudo docker build -t phphcs .` <- note the `.`
