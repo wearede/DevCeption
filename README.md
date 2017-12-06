@@ -77,6 +77,21 @@ p.s. Also because docker on mac really sucks!
 
 ## Getting Started
 
+```
+git clone https://github.com/wearede/DevCeption
+cd DevCeption
+vagrant up
+```
+
+Vagrant will perform following operations:
+- It will first download and then import the centos7 base box.
+- It will rsync www and docker configuration files to the newly created centos7 base box.
+- Then using ansible it will configure and install dev tools from playbooks.
+
+... grab a coffee, it will take some time on a slow connection.
+
+**Note:** Install vim plugins task could take a while, but if it hangs see *Common issues* section below.
+
 ## Back Up Your Work
 
 It is important to understand that project files will live inside DevCeption box and will not be synced back to host machine automatically. You have to do this manually.
