@@ -3,3 +3,4 @@
 * Some ansible tasks report changes all the time
 * Build webserver and phpcs docker containers automatically
 * Implement database backup scripts
+* Move phpcs out of vim playbook
