@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   end
 
   # config.push.define "atlas" do |push|
-  #   push.app = "wearede/devbox"
+  #   push.app = "wearede/devception"
   # end
 
   config.vm.provision "ansible" do |ansible|
