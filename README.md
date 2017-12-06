@@ -75,6 +75,13 @@ p.s. Also because docker on mac really sucks!
 
 ## Back Up Your Work
 
+In the root DevCeption directory
+
+```
+rsync -vriht DevBox:/srv/docker/ ./configs/docker/ --delete
+rsync -vriht DevBox:/srv/www/ ./www --delete
+```
+
 ## Common Issues
 
 - ansible task **Install vim plugins** hangs:
