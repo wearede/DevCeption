@@ -44,7 +44,10 @@ p.s. Also because docker on mac really sucks!
 - - ultisnips
 - - vim-snippets
 - nvm
-- - node lts, gulp, diff-so-fancy
+- - node lts, gulp
+- git
+- - git-commit-template
+- - diff-so-fancy
 
 ### Host Requirements
 
