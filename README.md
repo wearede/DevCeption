@@ -3,8 +3,7 @@
 ## Why?
 We (Devs) use too many tools for our everyday tasks, from editors to webservers to terminals. This makes switching machines painful. In case of theft, data damage, or simply format-reinstall OS, you need to go through the pain of reinstall reconfigure everytime... Solution to this problem is to have all your dev tools inside a container that can be **created**, **destroyed**, **reproduced** on any machine without a hit to productivity.
 
-With **DevCeption**, I can go from mac to linux to windows and always find my home dev environment.
-This is huge boost to productivyt and versatility as Host OS becomes meaningless.
+With **DevCeption**, you can go from mac to linux to windows and always find your habitual dev environment. This is huge boost to productivyt and versatility as Host OS becomes meaningless.
 
 p.s. Also because docker on mac really sucks!
 
