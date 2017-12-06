@@ -6,22 +6,38 @@
 - - services
 - - - webserver
 - - - - nginx
-- - - - - php generic config
-- - - - - WordPress config
+- - - - - php generic config (Laravel)
+- - - - - WordPress optmized config
 - - - - php5-fpm, php7-fpm
 - - - - mariadb
 - - - phpcs
 - - docker-compose
 - oh-my-zsh
-- - git
-- - history-substring-search
-- - tmux
+- - plugins: git, history-substring-search, tmux
 - tmux
 - vim
+- - vim-quantum
+- - ctrlp
+- - vim-vinegar
+- - vim-gitgutter
+- - vim-trailing-whitespace
+- - editorconfig-vim
+- - delimitMate
+- - syntastic
+- - indentLine
+- - vim-commentary
+- - vim-polyglot
+- - matchtagalways
+- - vim-buftabline
+- - vim-bracketed-paste
+- - vim-tmux-focus-events
+- - vim-tmux-clipboard
+- - vim-surround
+- - YouCompleteMe
+- - ultisnips
+- - vim-snippets
 - nvm
-- - node lts
-- - gulp
-- - diff-so-fancy
+- - node lts, gulp, diff-so-fancy
 
 ### Host Requirements
 
