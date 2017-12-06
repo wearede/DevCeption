@@ -1,5 +1,12 @@
 # DevCeption
 
+### Host Requirements
+
+- virtualobx
+- vagrant
+- ansible
+- rsync
+
 ### Getting Started
 
 ### Back Up Your Work
