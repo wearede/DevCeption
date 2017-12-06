@@ -77,6 +77,8 @@ p.s. Also because docker on mac really sucks!
 
 ## Getting Started
 
+### Step 1
+
 ```
 git clone https://github.com/wearede/DevCeption
 cd DevCeption
@@ -91,6 +93,34 @@ Vagrant will perform following operations:
 ... grab a coffee, it will take some time on a slow connection.
 
 **Note:** `Install vim plugins` task could take a while, but if it hangs see *Common issues* section below.
+
+### Step 2
+
+Lets configure ssh on host machine for painless ssh-eing, on macOS you would do
+
+```
+vi ~/.ssh/config
+
+```
+and paste
+
+```
+#
+Host DevCeption
+HostName 127.0.0.1
+User vagrant
+Port 2222
+UserKnownHostsFile /dev/null
+StrictHostKeyChecking no
+PasswordAuthentication no
+IdentityFile ~/Code/Vagrant/DevCeption/.vagrant/machines/DevCeption/virtualbox/private_key
+IdentitiesOnly yes
+LogLevel FATAL
+```
+
+obviously replacing `IdentityFile` path `~/Code/Vagrant/DevCeption` with the location of your *DevCeption* directory.
+
+Now you can simply `ssh DevCeption` from your host machine terminal.
 
 ## Back Up Your Work
 
