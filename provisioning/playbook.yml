@@ -1,6 +1,6 @@
 ---
-- name: Setup DevBox
-  hosts: DevBox
+- name: Setup DevCeption
+  hosts: DevCeption
 
   roles:
     - timezone
