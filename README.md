@@ -2,7 +2,7 @@
 
 ### Host Requirements
 
-- virtualobx
+- virtualbox
 - vagrant
 - ansible
 - rsync
