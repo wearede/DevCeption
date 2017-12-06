@@ -1,2 +1,7 @@
-# If using iterm2 and vim plugin install hangs, and if you log in and there are locale errors, disable profile -> terminal -> environment -> set locale variable automatically
-# On mac host (if using oh-my-zsh) Uncommented export LANG=en_US.UTF-8 in .zshrc 
+# DevCeption
+
+# Common issues
+
+- vim plugin install hangs:
+  - Iterm2 disable profile -> terminal -> environment -> set locale variable automatically
+  - oh-my-zsh uncommented export LANG=en_US.UTF-8 in .zshrc 
