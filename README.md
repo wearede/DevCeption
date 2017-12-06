@@ -90,7 +90,7 @@ Vagrant will perform following operations:
 
 ... grab a coffee, it will take some time on a slow connection.
 
-**Note:** Install vim plugins task could take a while, but if it hangs see *Common issues* section below.
+**Note:** `Install vim plugins` task could take a while, but if it hangs see *Common issues* section below.
 
 ## Back Up Your Work
 
