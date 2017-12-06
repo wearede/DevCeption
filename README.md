@@ -96,7 +96,7 @@ Vagrant will perform following operations:
 
 ### Step 2
 
-Lets configure ssh on host machine for painless ssh-eing, on macOS you would do
+Lets configure ssh on host machine for painless ssh-eing. On macOS you would do:
 
 ```
 vi ~/.ssh/config
@@ -120,22 +120,26 @@ obviously replacing `IdentityFile` path `~/Code/Vagrant/DevCeption` with the loc
 
 `:wq`
 
-and now you can simply `ssh DevCeption` from your host machine terminal.
+and now you can simply `ssh DevCeption` from your host machine.
 
 ### Step 3
 
-We need to build docker webserver containers inside a DevCeption box - While we are at it, we can take tmux out for a spin.
+We need to build docker webserver containers inside a DevCeption box - and while we are at it, we can take tmux out for a spin.
 
 `ssh DevCeption` and once you are in type `ts webserver`
 
-new tmux session will start, type `cd /srv/docker/services` lets divide window in two panels, type `alt+\` to navigate panels use `alt+h` or `alt+l` in one panel navigate `phpcs` directory on the other `webserver`
+- new tmux session will start, type a. `cd /srv/docker/services`,
+- lets divide window in two panels type b. `alt+\`,
+- to navigate panels use `alt+h` or `alt+l`.
 
-In webserver directory run `sudo docker-compose up`
-and inside phpcs dir run `sudo docker build -t phphcs .`
+In the left panel navigate `cd webserver` directory on the right one `cd phpcs`
+
+- in the webserver directory run `sudo docker-compose up`
+- and inside phpcs dir run `sudo docker build -t phphcs .` <- note the `.`
 
 ![tmux](https://user-images.githubusercontent.com/8479569/33686579-caa3639e-daee-11e7-897e-7547d61c07b3.png)
 
-You can now quit iterm2 but tmux session will continue to run inside DevCeption box, you can always go back to it by typing `ta webserver` to see other sessions type `tl`
+You can now quit iterm2 but tmux session will continue to run inside DevCeption box, you can always go back to it by typing `ta webserver` and to see other sessions type `tl`.
 
 ## Back Up Your Work
 
