@@ -75,7 +75,7 @@ p.s. Also because docker on mac really sucks!
 
 ## Back Up Your Work
 
-**Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine.
+**Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
 
 Run these commands on your host:
 
