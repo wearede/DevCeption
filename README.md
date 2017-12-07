@@ -147,6 +147,9 @@ You can now quit iterm2 but tmux session will continue to run inside DevCeption 
 
 Lets connect to mariadb running inside DevCeption box, inside docker container, from our host machine. On macOS sequel pro works really well for managing mariadb/mysql:
 
+![sequelpro](https://user-images.githubusercontent.com/8479569/33715683-e336c1a2-db6c-11e7-9cb2-cecc872e252b.png)
+
+We are using ssh tunneling to connect to db. ssh key is the same as IdentityFile from step 2, e.g. `~/Code/Vagrant/DevCeption/.vagrant/machines/DevCeption/virtualbox/private_key`
 
 ### Step 5
 
