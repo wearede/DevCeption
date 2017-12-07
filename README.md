@@ -33,8 +33,6 @@ p.s. Also because docker on mac really sucks!
 
 **tmux**
 
-![Tmux](https://user-images.githubusercontent.com/8479569/33702871-ec5c1ce2-db3e-11e7-8a27-0377b6426b62.png)
-
 ---
 
 **vim**
