@@ -152,7 +152,7 @@ On macOS sequelpro works really well for managing mariadb/mysql:
 
 - We are using ssh tunneling to DevCeption box.
 - ssh key is the same as IdentityFile from step 2, e.g. `~/Code/Vagrant/DevCeption/.vagrant/machines/DevCeption/virtualbox/private_key`
-- root password is defined in [docker-compose.yml](https://github.com/wearede/DevCeption/blob/master/configs/docker/services/webserver/docker-compose.yml#L10)
+- mariadb root password is defined in [docker-compose.yml](https://github.com/wearede/DevCeption/blob/master/configs/docker/services/webserver/docker-compose.yml#L10)
 
 ### Step 5
 
