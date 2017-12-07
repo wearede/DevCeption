@@ -143,6 +143,17 @@ In the left panel `cd webserver` directory on the right one `cd phpcs`
 
 You can now quit iterm2 but tmux session will continue to run inside DevCeption box (in the background), you can always go back to it by typing `ta webserver`, and to see all running sessions type `tl`.
 
+### Step 4
+
+Lets connect to mariadb running inside DevCeption box, inside docker container, from our host machine. On macOS sequel pro works really well for managing mariadb/mysql:
+
+
+### Step 5
+
+Finally we will see how to get a web project up and running:
+
+
+
 ## Back Up Your Work
 
 It is important to understand that project files will live inside DevCeption box and will not be synced back to host machine automatically. You have to do this manually.
