@@ -175,6 +175,7 @@ rsync -vriht DevCeption:/srv/www/ ./www --delete
 ## Common Issues
 
 - ansible task **Install vim plugins** hangs:
-  - *Iterm2* disable `profile -> terminal -> environment -> set locale variable automatically`
+  - *Iterm2* settings disable `profile -> terminal -> environment -> set locale variable automatically`
   - *oh-my-zsh* uncomment `export LANG=en_US.UTF-8` in `.zshrc` 
 - copying to host machine clipboard
+  - *Iterm2* for tmux copy selection to work, in general settings enable `Applications in terminal may access clipboard`
