@@ -33,7 +33,7 @@ p.s. Also because docker on mac really sucks!
 
 **tmux**
 
-[![asciicast](https://asciinema.org/a/BxAHOkkNLMHDLx0rWG7gr3ib9.png)](https://asciinema.org/a/BxAHOkkNLMHDLx0rWG7gr3ib9)
+[![asciicast](https://asciinema.org/a/151667.png)](https://asciinema.org/a/151667)
 
 ---
 
