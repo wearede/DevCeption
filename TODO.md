@@ -3,5 +3,6 @@
 * Some ansible tasks report changes all the time
 * Build webserver and phpcs docker containers on vagrant up
 * Implement database backup scripts
-* Move phpcs out of vim playbook
-* Add helpers: composer (container), nginx create site config and reload
+* ~Move phpcs out of vim playbook~
+* Add helpers: composer (container), nginx create site config and reload, phpunit
+* Run rsync only on first vagrant up
