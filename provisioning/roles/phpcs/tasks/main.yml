@@ -1,0 +1,26 @@
+---
+
+- name: Copy php
+  copy:
+    src: php
+    dest: /usr/local/bin/php
+    mode: a+x
+  register: php
+  become: yes
+
+- name: Copy phpcs
+  copy:
+    src: phpcs
+    dest: /usr/local/bin/phpcs
+    mode: a+x
+  register: phpcs
+  become: yes
+
+- name: Copy phpcbf
+  copy:
+    src: phpcbf
+    dest: /usr/local/bin/phpcbf
+    mode: a+x
+  register: phpcbf
+  become: yes
+
