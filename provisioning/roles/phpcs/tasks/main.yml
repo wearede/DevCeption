@@ -1,13 +1,4 @@
 ---
-
-- name: Copy php
-  copy:
-    src: php
-    dest: /usr/local/bin/php
-    mode: a+x
-  register: php
-  become: yes
-
 - name: Copy phpcs
   copy:
     src: phpcs
