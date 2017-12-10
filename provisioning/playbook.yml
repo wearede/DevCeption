@@ -4,7 +4,8 @@
 
   roles:
     - timezone
-    # - epel
+    - epel
+    - misc
     - git
     - oh-my-zsh
     - nvm
