@@ -66,7 +66,10 @@ p.s. Also because docker on mac really sucks!
 ---
 
 **nvm**
-- node lts, gulp
+- node lts
+- npm
+- - gulp
+- - diff-so-fancy
 
 ---
 
