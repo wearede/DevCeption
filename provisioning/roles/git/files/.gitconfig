@@ -1,0 +1,15 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+[core]
+	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = vim
+[push]
+	default = simple
+[commit]
+	template = ~/.git-commit-template.txt
