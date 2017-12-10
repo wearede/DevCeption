@@ -1,5 +1,13 @@
 ---
-- name: Install git
+- name: Install epel repo
+  yum: name=epel-release state=latest
+  become: yes
+
+- name: Install ius repo
+  yum: name=https://centos7.iuscommunity.org/ius-release.rpm state=latest
+  become: yes
+
+- name: Install git 2
   yum: name=git2u state=latest
   become: yes
 

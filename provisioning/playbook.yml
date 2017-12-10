@@ -4,7 +4,6 @@
 
   roles:
     - timezone
-    - epel
     - misc
     - git
     - oh-my-zsh
