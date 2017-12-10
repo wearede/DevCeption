@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker run -it --rm -v "$(pwd)":/usr/src/myapp php:7.0-cli-alpine php "$@"
+sudo docker run -it --rm --network=webserver_default -v "$(pwd)":/usr/src/myapp php:7.0-cli-alpine php "$@"

@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker run -it --rm -v "$(pwd)":/app phpunit/phpunit "$@"
+sudo docker run -it --rm --network=webserver_default -v "$(pwd)":/app phpunit/phpunit "$@"
