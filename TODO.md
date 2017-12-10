@@ -6,3 +6,4 @@
 * ~Move phpcs out of vim playbook~
 * Add helpers: ~composer (container)~, nginx create site config and reload, ~phpunit~
 * Run rsync only on first vagrant up
+* Cleanup commit history
