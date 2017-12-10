@@ -7,3 +7,4 @@
 * Add helpers: ~composer (container)~, nginx create site config and reload, ~phpunit~
 * Run rsync only on first vagrant up
 * Cleanup commit history
+* Example nginx config for a php project
