@@ -1,6 +1,6 @@
 ---
 - name: Install git
-  yum: name=git state=latest
+  yum: name=git2u state=latest
   become: yes
 
 - name: Copy .gitconfig
