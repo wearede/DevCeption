@@ -1,4 +1,0 @@
----
-- name: install npm packages
-  shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && npm i -g gulp diff-so-fancy"

@@ -8,4 +8,4 @@
 * Run rsync only on first vagrant up
 * Cleanup commit history
 * Example nginx config for a php project (explain in readme)
-* Merge nvm npm playbooks
+* ~Merge nvm npm playbooks~
