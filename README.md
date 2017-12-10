@@ -21,8 +21,12 @@ p.s. Also because docker on mac really sucks!
 - - - - WordPress optmized config
 - - - php5-fpm, php7-fpm
 - - - mariadb
-- - phpcs, wpcs
 - docker-compose
+- php-tools
+- - php-cli
+- - composer
+- - phpunit
+- - phpcs (with wpcs), phpcbf
 
 ---
 
