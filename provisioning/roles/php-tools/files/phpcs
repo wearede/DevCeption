@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo docker run -it --rm -v "$(pwd)":/app phpcs phpcs --basepath=/app/ "$@"
+sudo docker run -i --rm -v "$(pwd)":/app phpcs phpcs --basepath=/app/ "$@"
