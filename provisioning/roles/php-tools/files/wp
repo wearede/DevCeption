@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo docker run -it --rm --network=webserver_default -v "$(pwd)":/mnt -u "$(id -u)":"$(id -g)" soifou/wpcli-alpine:latest "$@"

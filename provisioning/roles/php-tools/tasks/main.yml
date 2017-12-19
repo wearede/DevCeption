@@ -38,3 +38,11 @@
     mode: a+x
   register: phpcbf
   become: yes
+
+- name: Copy wp-cli
+  copy:
+    src: wp
+    dest: /usr/local/bin/wp
+    mode: a+x
+  register: wp
+  become: yes
