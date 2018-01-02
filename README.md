@@ -174,8 +174,8 @@ It is important to understand that project files will live inside DevCeption box
 Run these commands on your host:
 
 ```
-rsync -vriht DevCeption:/srv/docker/ ./configs/docker/ --delete
-rsync -vriht DevCeption:/srv/www/ ./www --delete
+rsync -vrihtl DevCeption:/srv/docker/ ./configs/docker/ --delete
+rsync -vrihtl DevCeption:/srv/www/ ./www --delete
 ```
 **Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
 
