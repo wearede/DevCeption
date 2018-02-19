@@ -192,9 +192,20 @@ On macOS:
 brew install dnsmasq
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 bash -c 'echo "address=/test/192.168.33.33" > $(brew --prefix)/etc/dnsmasq.d/devception.conf'
+```
 
+Uncomment `conf-dir=/usr/local/etc/dnsmasq.d/,*.conf` in `$(brew --prefix)/etc/dnsmasq.conf`
+
+And using [homebrew-services](https://github.com/Homebrew/homebrew-services) start dnsmasq service:
+```
 sudo brew services start dnsmasq
+```
+pinging any **\*.test** name should now produce these results:
 
+```
+PING test.test (192.168.33.33): 56 data bytes
+64 bytes from 192.168.33.33: icmp_seq=0 ttl=64 time=0.544 ms
+64 bytes from 192.168.33.33: icmp_seq=1 ttl=64 time=0.408 ms
 ```
 
 ### Step X
