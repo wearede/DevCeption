@@ -163,8 +163,6 @@ On macOS sequelpro works really well for managing mariadb/mysql:
 
 ### Step 5
 
-Finally, let's see how to get a web project up and running.
-
 We need to route a **project.test** to the DevCeption box. You can do this simply by adding a relevant entry in `/etc/hosts` file:
 
 ```
@@ -208,9 +206,9 @@ PING test.test (192.168.33.33): 56 data bytes
 64 bytes from 192.168.33.33: icmp_seq=1 ttl=64 time=0.408 ms
 ```
 
-### Step X
+### Step 6
 
-
+Finally, let's see how to get a web project up and running.
 
 ## Back Up Your Work
 
