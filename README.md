@@ -187,6 +187,12 @@ We need to route a **project.local** to the DevCeption box. You can do this simp
 But for multiple projects, manually adding/removing local names to the hosts file will get boring pretty fast.
 Using [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) we can route all \*.local names to the vagrant box, avoiding manual entries in `/etc/hosts` file for each project.
 
+On macOS:
+```
+brew install dnsmasq
+sudo brew services start dnsmasq
+```
+
 ### Step X
 
 
