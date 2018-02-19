@@ -184,9 +184,8 @@ We need to route a **project.local** to the DevCeption box. You can do this simp
 
 *192.168.33.33 is the DevCeption box IP we assigned in the [vagrant config](https://github.com/wearede/DevCeption/blob/master/Vagrantfile#L9).*
 
-But for multiple projects manually adding/removing local domains to the hosts file will get boring pretty fast.
-We can avoid this manual work by installing [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html).
-Using Dnsmasq we can route any \*.local domain to the vagrant box.
+But for multiple projects, manually adding/removing local domains to the hosts file will get boring pretty fast.
+Using [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) we can route all \*.local domains to the vagrant box.
 
 ### Step X
 
