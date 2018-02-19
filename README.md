@@ -163,7 +163,32 @@ On macOS sequelpro works really well for managing mariadb/mysql:
 
 ### Step 5
 
-Finally we will see how to get a web project up and running:
+Finally let's see how to get a web project up and running.
+
+We need to route a **project.local** to the DevCeption box. You can do this simply by adding a relevant entry in `/etc/hosts` file:
+
+```
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+# DevCeption
+192.168.33.33 project.local
+```
+
+192.168.33.33 is the DevCeption box IP we assigned in the [vagrant config](https://github.com/wearede/DevCeption/blob/master/Vagrantfile#L9)
+
+But for multiple projects manually adding local domains to the hosts file will get boring pretty fast, so let's make this automatic.
+
+
+
+### Step X
 
 
 
@@ -171,7 +196,7 @@ Finally we will see how to get a web project up and running:
 
 It is important to understand that project files will live inside DevCeption box and will not be synced back to host machine automatically. You have to do this manually.
 
-Run these commands on your host:
+Run these commands on your host (from DevCeption dir):
 
 ```
 rsync -vrihtl DevCeption:/srv/docker/ ./configs/docker/ --delete
