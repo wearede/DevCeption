@@ -220,4 +220,4 @@ rsync -vrihtl DevCeption:/srv/www/ ./www --delete
   - *oh-my-zsh* uncomment `export LANG=en_US.UTF-8` in `.zshrc` 
 - Copying to host machine clipboard:
   - *Iterm2* in general settings enable `Applications in terminal may access clipboard` (works for tmux).
-- In some browsers, project.test will trigger google search, to avoid this add http:// in front or / in the end.
+- In some browsers, **project.test** will trigger google search, to avoid this add `http://` in front or `/` in the end.
