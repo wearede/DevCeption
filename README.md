@@ -163,9 +163,9 @@ On macOS sequelpro works really well for managing mariadb/mysql:
 
 ### Step 5
 
-Finally let's see how to get a web project up and running.
+Finally, let's see how to get a web project up and running.
 
-We need to route a **project.local** to the DevCeption box. You can do this simply by adding a relevant entry in `/etc/hosts` file:
+We need to route a **project.test** to the DevCeption box. You can do this simply by adding a relevant entry in `/etc/hosts` file:
 
 ```
 ##
@@ -179,18 +179,22 @@ We need to route a **project.local** to the DevCeption box. You can do this simp
 ::1             localhost
 
 # DevCeption
-192.168.33.33 project.local
+192.168.33.33 project.test
 ```
 
 *192.168.33.33 is the DevCeption box IP we assigned in the [vagrant config](https://github.com/wearede/DevCeption/blob/master/Vagrantfile#L9).*
 
 But for multiple projects, manually adding/removing local names to the hosts file will get boring pretty fast.
-Using [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) we can route all \*.local names to the vagrant box, avoiding manual entries in `/etc/hosts` file for each project.
+Using [Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) we can route all **\*.test** names to the vagrant box, avoiding manual entries in `/etc/hosts` file for each project.
 
 On macOS:
 ```
 brew install dnsmasq
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
+bash -c 'echo "address=/test/192.168.33.33" > $(brew --prefix)/etc/dnsmasq.d/devception.conf'
+
 sudo brew services start dnsmasq
+
 ```
 
 ### Step X
