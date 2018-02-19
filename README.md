@@ -216,7 +216,7 @@ It is important to understand that project files will live inside DevCeption box
 
 Inside DevCeption root directory you can run `./pull.sh` to download (backup) changes from the virtual box, and `./push.sh` to upload.
 
-**Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
+**Warnning:** Don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
 
 ## Common Issues
 
