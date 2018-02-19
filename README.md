@@ -214,12 +214,8 @@ Finally, let's see how to get a web project up and running.
 
 It is important to understand that project files will live inside DevCeption box and will not be synced back to host machine automatically. You have to do this manually.
 
-Run these commands on your host (from DevCeption dir):
+Inside DevCeption root directory you can run `./pull.sh` to download (backup) changes from the virtual box, and `./push.sh` to upload.
 
-```
-rsync -vrihtl DevCeption:/srv/docker/ ./configs/docker/ --delete
-rsync -vrihtl DevCeption:/srv/www/ ./www --delete
-```
 **Warnning:** Running `vagrant up` or `vagrant provision` will overwrite project files inside your DevCeption box with the ones on your host. So don't forget to periodically bring back / backup changes to your host machine, especially if you decide to do `vagrant destroy` ;)
 
 ## Common Issues
