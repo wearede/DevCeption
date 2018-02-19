@@ -215,8 +215,9 @@ rsync -vrihtl DevCeption:/srv/www/ ./www --delete
 
 ## Common Issues
 
-- ansible task **Install vim plugins** hangs:
+- Ansible task **Install vim plugins** hangs:
   - *Iterm2* settings disable `profile -> terminal -> environment -> set locale variable automatically`
   - *oh-my-zsh* uncomment `export LANG=en_US.UTF-8` in `.zshrc` 
-- copying to host machine clipboard
-  - *Iterm2* in general settings enable `Applications in terminal may access clipboard` (works for tmux)
+- Copying to host machine clipboard:
+  - *Iterm2* in general settings enable `Applications in terminal may access clipboard` (works for tmux).
+- In some browsers, project.test will trigger google search, to avoid this add http:// in front or / in the end.
