@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "DevCeption"
   config.vm.network "private_network", ip: "192.168.33.33"
   config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.provision "shell", inline: "mkdir /srv/www /srv/docker && chown -R vagrant:vagrant /srv/*"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
