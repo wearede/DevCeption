@@ -3,4 +3,5 @@
   yum: name={{item}} state=latest
   with_items:
     - unzip
+    - rsync
   become: yes
