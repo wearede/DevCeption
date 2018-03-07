@@ -4,4 +4,5 @@
   with_items:
     - unzip
     - rsync
+    - tree
   become: yes
