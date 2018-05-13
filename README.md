@@ -198,6 +198,9 @@ And using [homebrew-services](https://github.com/Homebrew/homebrew-services) sta
 ```
 sudo brew services start dnsmasq
 ```
+Add local DNS to search order in System Preferences:
+System Preferences > Network > Wi-Fi (or whatever you use) > Advanced... > DNS > add 127.0.0.1 to top of the list.
+
 pinging any **\*.test** name should now produce these results:
 
 ```
