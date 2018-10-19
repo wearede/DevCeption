@@ -5,4 +5,5 @@
     - unzip
     - rsync
     - tree
+    - svn
   become: yes
