@@ -46,3 +46,11 @@
     mode: a+x
   register: wp
   become: yes
+
+- name: Copy wpscan
+  copy:
+    src: wpscan
+    dest: /usr/local/bin/wpscan
+    mode: a+x
+  register: wpscan
+  become: yes
