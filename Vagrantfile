@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
     vb.cpus = 2
+    vb.customize ["modifyvm", :id, "--audio", "none"]
   end
 
   # config.push.define "atlas" do |push|
