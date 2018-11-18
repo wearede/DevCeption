@@ -34,6 +34,7 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'airblade/vim-rooter'
 
 " Initialize plugin system
 call plug#end()
@@ -72,17 +73,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_php_phpcs_exec = '/usr/local/bin/phpcs'
-let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
+let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_debug = 3
 
 " when opening files with :Ex or :Sex nertw uses full path
 " this creates problem with docker and path inside containers
 " settings bellow makes sure relative path to current buffer is used
-" http://vi.stackexchange.com/a/655/10804
-set autochdir
-set browsedir=current
+autocmd BufReadPost * silent! lcd .
 
 "*****************************************************************************
 "" yank and cut to osx clipboard

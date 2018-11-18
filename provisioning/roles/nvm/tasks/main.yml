@@ -15,4 +15,4 @@
 
 - name: install npm packages
   shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && npm i -g gulp diff-so-fancy"
+    /bin/bash -c "source ~/.nvm/nvm.sh && npm i -g gulp diff-so-fancy eslint eslint-config-wordpress eslint-plugin-vue@next eslint-plugin-react"
