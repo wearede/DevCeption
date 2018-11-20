@@ -4,4 +4,4 @@ sudo docker run -it --rm \
                     -v /etc/passwd:/etc/passwd:ro \
                     -v /etc/group:/etc/group:ro \
                     -v "$(pwd)":/app \
-                    composer/composer "$@"
+                    composer:1.7 "$@"
