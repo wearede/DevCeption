@@ -16,8 +16,14 @@ services:
     volumes:
       - /srv/www:/www
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-  php7-fpm:
-    build: ./php/php7-fpm
+  php7.0-fpm:
+    build: ./php/php7.0-fpm
+    restart: always
+    volumes:
+      - /srv/www:/www
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+  php7.2-fpm:
+    build: ./php/php7.2-fpm
     restart: always
     volumes:
       - /srv/www:/www
