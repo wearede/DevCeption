@@ -1,11 +1,20 @@
 ---
-- name: Copy php
+- name: Copy php7.2
   copy:
-    src: php
-    dest: /usr/local/bin/php
+    src: php7.2
+    dest: /usr/local/bin/php7.2
     mode: a+x
+  register: php72
+  become: yes
+
+- name: Alias php -> php7.2
+  file:
+    src: /usr/local/bin/php7.2
+    dest: /usr/local/bin/php
+    state: link
   register: php
   become: yes
+  when: php72.changed
 
 - name: Copy phpunit
   copy:
