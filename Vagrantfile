@@ -11,8 +11,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "mkdir /srv/www /srv/docker && chown -R vagrant:vagrant /srv/*"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "1024"
+    vb.memory = 1024
     vb.cpus = 2
+    vb.gui = false
+    vb.customize ["modifyvm", :id, "--vrde", "off"]
     vb.customize ["modifyvm", :id, "--audio", "none"]
   end
 
