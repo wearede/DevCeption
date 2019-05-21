@@ -15,6 +15,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tyrannicaltoucan/vim-quantum' " let g:quantum_black = 1
+Plug 'aonemd/kuroi.vim' " set background=dark
+Plug 'fatih/molokai'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'airblade/vim-gitgutter'
@@ -26,8 +28,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'valloric/matchtagalways'
-Plug 'ap/vim-buftabline'
-Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tpope/vim-surround'
@@ -35,6 +35,11 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'godlygeek/tabular'
+Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
+Plug 'greymd/oscyank.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -52,8 +57,8 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-let g:quantum_black = 1
-silent! colorscheme quantum
+set background=dark
+silent! colorscheme kuroi
 
 "*****************************************************************************
 "" Optimizations
@@ -68,9 +73,9 @@ let g:python3_host_skip_check = 1
 "" syntastic
 "*****************************************************************************
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
@@ -80,10 +85,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 " this creates problem with docker and path inside containers
 " settings bellow makes sure relative path to current buffer is used
 autocmd BufReadPost * silent! lcd .
-
-"*****************************************************************************
-"" yank and cut to osx clipboard
-"*****************************************************************************
 
 "*****************************************************************************
 "" indent
@@ -135,8 +136,6 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|gi
 noremap <Tab> :bnext<CR>
 noremap <S-Tab> :bprevious<CR>
 
-" noremap <C-w> :bd<CR> " interferes with ctrl+ww to navigate panes
-
 " Switch buffers without saving to a currently modified file
 set hidden
 
@@ -173,4 +172,39 @@ set incsearch
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-j>"
+
+"*****************************************************************************
+"" YCM
+"*****************************************************************************
+
+" Disable Vim's preview window
+" https://github.com/Valloric/YouCompleteMe#i-get-a-weird-window-at-the-top-of-my-file-when-i-use-the-semantic-engine
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
+"*****************************************************************************
+"" Gutentags
+"*****************************************************************************
+
+let g:gutentags_project_root = ['.gutctags']
+let g:gutentags_add_default_project_roots = 0
+
+"*****************************************************************************
+"" VimAirline
+"*****************************************************************************
+"
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+"*****************************************************************************
+"" Tagbar
+"*****************************************************************************
+
+nmap <F8> :TagbarToggle<CR>
+
+"*****************************************************************************
+"" OscYank - yank to OS clipboard, works with ssh
+"*****************************************************************************
+
+noremap <leader>y :Oscyank<CR>
 
