@@ -11,7 +11,7 @@
 - name: Clone tmux
   git: repo=git://github.com/tmux/tmux.git
        dest=/tmp/tmux
-       version=2.8
+       version=2.9a
   register: tmux
 
 - name: Make tmux
