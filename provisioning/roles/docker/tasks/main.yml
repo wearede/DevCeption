@@ -19,6 +19,12 @@
     state: started
   become: yes
 
+- name: Copy daemon.json
+  copy:
+    src: daemon.json
+    dest: /etc/docker/daemon.json
+  become: yes
+
 - name: Install docker-compose
   get_url:
     url: https://github.com/docker/compose/releases/download/1.16.1/docker-compose-Linux-x86_64
