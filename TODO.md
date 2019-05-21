@@ -11,3 +11,5 @@
 * ~Merge nvm npm playbooks~
 * phpunit and php containers rewrite to accept network argument instead of hardcoding it to webserver_default
 * mechanism to copy ssh keys to the DevCeption box
+* Update readme
+* Lnav requires epel, install epel via lnav recipe
