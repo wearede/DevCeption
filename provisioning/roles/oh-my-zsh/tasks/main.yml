@@ -12,6 +12,13 @@
   command: cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
   when: ohmyzsh.changed
 
+- name: Enable history dates in zshrc
+  replace:
+    path: ~/.zshrc
+    regexp: '# HIST_STAMPS="mm/dd/yyyy"'
+    replace: 'HIST_STAMPS="mm/dd/yyyy"'
+  when: ohmyzsh.changed
+
 - name: Enable plugins in zshrc
   replace:
     path: ~/.zshrc
