@@ -1,6 +1,6 @@
 ---
 - name: Setup DevCeption
-  hosts: DevCeption
+  hosts: all
 
   roles:
     - timezone
