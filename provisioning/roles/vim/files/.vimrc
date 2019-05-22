@@ -70,7 +70,7 @@ let g:python_host_skip_check = 1
 let g:python3_host_skip_check = 1
 
 "*****************************************************************************
-"" syntastic
+"" Syntastic
 "*****************************************************************************
 
 let g:syntastic_always_populate_loc_list = 0
@@ -81,20 +81,20 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_debug = 3
 
-" when opening files with :Ex or :Sex nertw uses full path
+" When opening files with :Ex or :Sex nertw uses full path
 " this creates problem with docker and path inside containers
 " settings bellow makes sure relative path to current buffer is used
 autocmd BufReadPost * silent! lcd .
 
 "*****************************************************************************
-"" indent
+"" Indent
 "*****************************************************************************
 
-" tabs
+" Tabs
 set listchars=tab:˗\ ,eol:¬
 set list
 
-" spaces
+" Spaces
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_char = '·'
@@ -108,29 +108,29 @@ filetype plugin indent on
 
 set ai
 
-" make < > indents keep selection
+" Make < > indents keep selection
 vnoremap < <gv
 vnoremap > >gv
 
 "*****************************************************************************
-"" match tags
+"" Match tags
 "*****************************************************************************
 
-" enable plugin for matching tag highlighting
+" Enable plugin for matching tag highlighting
 let g:mta_filetypes = { 'html' : 1, 'xhtml' : 1, 'xml' : 1, 'jinja' : 1, 'php': 1 }
 
 " This plugin makes the % command jump to matching HTML tags, if/else/endif in Vim scripts, etc.
 packadd! matchit
 
 "*****************************************************************************
-"" ctrlp
+"" Ctrlp
 "*****************************************************************************
 
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|git|hg|svn))$'
 
 "*****************************************************************************
-"" buffers
+"" Buffers
 "*****************************************************************************
 
 noremap <Tab> :bnext<CR>
@@ -140,7 +140,7 @@ noremap <S-Tab> :bprevious<CR>
 set hidden
 
 "*****************************************************************************
-"" general
+"" General
 "*****************************************************************************
 
 set encoding=utf8
@@ -158,7 +158,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set so=7
 
 "*****************************************************************************
-"" search
+"" Search
 "*****************************************************************************
 
 set ignorecase
