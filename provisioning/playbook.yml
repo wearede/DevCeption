@@ -4,8 +4,8 @@
 
   roles:
     - timezone
-    - misc
     - git
+    - misc
     - oh-my-zsh
     - nvm
     - vim
