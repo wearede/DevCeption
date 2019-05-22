@@ -139,6 +139,10 @@ noremap <S-Tab> :bprevious<CR>
 " Switch buffers without saving to a currently modified file
 set hidden
 
+" Fixes netrw, buffers opened by - don’t get closed
+" https://github.com/tpope/vim-vinegar/issues/13#issuecomment-489440040
+let g:netrw_fastbrowse = 0
+
 "*****************************************************************************
 "" General
 "*****************************************************************************
