@@ -6,4 +6,8 @@
     - rsync
     - tree
     - svn
+    - ctags
+    - lnav
+    - htop
+    - colordiff
   become: yes
