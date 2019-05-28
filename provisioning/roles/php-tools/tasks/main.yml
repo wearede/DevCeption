@@ -63,3 +63,11 @@
     mode: a+x
   register: wpscan
   become: yes
+
+- name: Copy phpdoc
+  copy:
+    src: phpdoc
+    dest: /usr/local/bin/phpdoc
+    mode: a+x
+  register: phpdoc
+  become: yes
