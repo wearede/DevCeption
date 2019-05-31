@@ -23,7 +23,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
@@ -70,16 +70,11 @@ let g:python_host_skip_check = 1
 let g:python3_host_skip_check = 1
 
 "*****************************************************************************
-"" Syntastic
+"" Ale
 "*****************************************************************************
 
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_debug = 3
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
 
 " When opening files with :Ex or :Sex nertw uses full path
 " this creates problem with docker and path inside containers
